@@ -1,0 +1,13 @@
+[Unit]
+Description=Port Forward Panel
+After=network.target
+
+[Service]
+WorkingDirectory=/opt/port-panel
+ExecStart=/usr/bin/python3 /opt/port-panel/app.py
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
+
